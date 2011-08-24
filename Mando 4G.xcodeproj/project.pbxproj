@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3356A74514053F45005F3314 /* MainWindow-iPad.xib */; };
+		EA098AC81405880400FF9577 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098AC71405880400FF9577 /* Icon.png */; };
+		EA098ACA1405880B00FF9577 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA098AC91405880B00FF9577 /* Icon@2x.png */; };
 		EA37235113FDB1FF004E2970 /* boto_0.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234513FDB1FF004E2970 /* boto_0.PNG */; };
 		EA37235213FDB1FF004E2970 /* boto_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234613FDB1FF004E2970 /* boto_1.PNG */; };
 		EA37235313FDB1FF004E2970 /* boto_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234713FDB1FF004E2970 /* boto_2.PNG */; };
@@ -98,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		3356A74614053F45005F3314 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		EA098AC71405880400FF9577 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		EA098AC91405880B00FF9577 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		EA37234513FDB1FF004E2970 /* boto_0.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_0.PNG; path = images/boto_0.PNG; sourceTree = "<group>"; };
 		EA37234613FDB1FF004E2970 /* boto_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_1.PNG; path = images/boto_1.PNG; sourceTree = "<group>"; };
 		EA37234713FDB1FF004E2970 /* boto_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_2.PNG; path = images/boto_2.PNG; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 		EAA6ABEA13F9902100165C93 = {
 			isa = PBXGroup;
 			children = (
+				EA098AC91405880B00FF9577 /* Icon@2x.png */,
+				EA098AC71405880400FF9577 /* Icon.png */,
 				EAA6ABFF13F9902200165C93 /* Mando 4G */,
 				EAA6ABF813F9902200165C93 /* Frameworks */,
 				EAA6ABF613F9902200165C93 /* Products */,
@@ -495,6 +501,8 @@
 				EA3723E914013981004E2970 /* boto_widgets.png in Resources */,
 				EA3723EB14013B8F004E2970 /* boto_catchtv.png in Resources */,
 				3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */,
+				EA098AC81405880400FF9577 /* Icon.png in Resources */,
+				EA098ACA1405880B00FF9577 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +582,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4ED63B74-9F4A-4C1A-8A9B-2B26B7B7A990";
 				SDKROOT = iphoneos;
@@ -588,7 +596,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mando 4G/Mando 4G-Prefix.pch";
 				INFOPLIST_FILE = "Mando 4G/Mando 4G-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -614,7 +622,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -631,7 +639,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -644,7 +652,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mando 4G/Mando 4G-Prefix.pch";
 				INFOPLIST_FILE = "Mando 4G/Mando 4G-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -657,7 +665,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mando 4G/Mando 4G-Prefix.pch";
 				INFOPLIST_FILE = "Mando 4G/Mando 4G-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
