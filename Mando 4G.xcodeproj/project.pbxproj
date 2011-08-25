@@ -10,6 +10,7 @@
 		3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3356A74514053F45005F3314 /* MainWindow-iPad.xib */; };
 		33D7CFE51405A94600AF7183 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFE41405A94500AF7183 /* Icon.png */; };
 		33D7CFE81405A94A00AF7183 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFE71405A94A00AF7183 /* Icon@2x.png */; };
+		33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFF21406EFF300AF7183 /* iTunesArtwork */; };
 		EA37235113FDB1FF004E2970 /* boto_0.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234513FDB1FF004E2970 /* boto_0.PNG */; };
 		EA37235213FDB1FF004E2970 /* boto_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234613FDB1FF004E2970 /* boto_1.PNG */; };
 		EA37235313FDB1FF004E2970 /* boto_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234713FDB1FF004E2970 /* boto_2.PNG */; };
@@ -102,6 +103,7 @@
 		3356A74614053F45005F3314 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		33D7CFE41405A94500AF7183 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		33D7CFE71405A94A00AF7183 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		33D7CFF21406EFF300AF7183 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		EA37234513FDB1FF004E2970 /* boto_0.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_0.PNG; path = images/boto_0.PNG; sourceTree = "<group>"; };
 		EA37234613FDB1FF004E2970 /* boto_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_1.PNG; path = images/boto_1.PNG; sourceTree = "<group>"; };
 		EA37234713FDB1FF004E2970 /* boto_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_2.PNG; path = images/boto_2.PNG; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		EAA6ABEA13F9902100165C93 = {
 			isa = PBXGroup;
 			children = (
+				33D7CFF21406EFF300AF7183 /* iTunesArtwork */,
 				33D7CFE71405A94A00AF7183 /* Icon@2x.png */,
 				33D7CFE41405A94500AF7183 /* Icon.png */,
 				EAA6ABFF13F9902200165C93 /* Mando 4G */,
@@ -503,6 +506,7 @@
 				3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */,
 				33D7CFE51405A94600AF7183 /* Icon.png in Resources */,
 				33D7CFE81405A94A00AF7183 /* Icon@2x.png in Resources */,
+				33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
