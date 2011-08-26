@@ -237,7 +237,7 @@
 					<object class="IBUIButton" id="387823119">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{243, 275}, {66, 41}}</string>
+						<string key="NSFrame">{{243, 230}, {66, 41}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="791998734"/>
@@ -386,7 +386,7 @@
 					<object class="IBUIButton" id="331220758">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{12, 365}, {66, 41}}</string>
+						<string key="NSFrame">{{12, 185}, {66, 41}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="520968873"/>
@@ -482,7 +482,7 @@
 					<object class="IBUIButton" id="549015857">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{243, 230}, {66, 41}}</string>
+						<string key="NSFrame">{{243, 275}, {66, 41}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="408034450"/>
@@ -504,7 +504,7 @@
 					<object class="IBUIButton" id="632668622">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{12, 185}, {66, 41}}</string>
+						<string key="NSFrame">{{12, 365}, {66, 41}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="480569086"/>
@@ -1108,11 +1108,8 @@
 							<reference ref="408034450"/>
 							<reference ref="119720293"/>
 							<reference ref="758586835"/>
-							<reference ref="387823119"/>
 							<reference ref="1004492909"/>
 							<reference ref="362019132"/>
-							<reference ref="549015857"/>
-							<reference ref="632668622"/>
 							<reference ref="480569086"/>
 							<reference ref="850269204"/>
 							<reference ref="188349022"/>
@@ -1129,11 +1126,14 @@
 							<reference ref="617848758"/>
 							<reference ref="676476206"/>
 							<reference ref="476828410"/>
-							<reference ref="331220758"/>
 							<reference ref="663408438"/>
 							<reference ref="191303136"/>
 							<reference ref="908275640"/>
 							<reference ref="941639249"/>
+							<reference ref="331220758"/>
+							<reference ref="387823119"/>
+							<reference ref="549015857"/>
+							<reference ref="632668622"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
