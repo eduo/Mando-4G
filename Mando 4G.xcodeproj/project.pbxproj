@@ -10,6 +10,7 @@
 		3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3356A74514053F45005F3314 /* MainWindow-iPad.xib */; };
 		33D7CFE51405A94600AF7183 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFE41405A94500AF7183 /* Icon.png */; };
 		33D7CFE81405A94A00AF7183 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFE71405A94A00AF7183 /* Icon@2x.png */; };
+<<<<<<< HEAD
 		EA22FD0814078F12000E5DAF /* boto_buit_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD0414078F12000E5DAF /* boto_buit_blue.png */; };
 		EA22FD0914078F12000E5DAF /* boto_buit_green.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD0514078F12000E5DAF /* boto_buit_green.png */; };
 		EA22FD0A14078F12000E5DAF /* boto_buit_red.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD0614078F12000E5DAF /* boto_buit_red.png */; };
@@ -20,6 +21,8 @@
 		EA22FD161407A053000E5DAF /* boto_skip_fw.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD101407A053000E5DAF /* boto_skip_fw.png */; };
 		EA22FD171407A053000E5DAF /* boto_skip_rw.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD111407A053000E5DAF /* boto_skip_rw.png */; };
 		EA22FD181407A053000E5DAF /* boto_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD121407A053000E5DAF /* boto_stop.png */; };
+=======
+>>>>>>> 17801456e80e2f7d6eb11f77458fcb2d4e44e695
 		33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFF21406EFF300AF7183 /* iTunesArtwork */; };
 		EA37235113FDB1FF004E2970 /* boto_0.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234513FDB1FF004E2970 /* boto_0.PNG */; };
 		EA37235213FDB1FF004E2970 /* boto_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234613FDB1FF004E2970 /* boto_1.PNG */; };
@@ -113,6 +116,7 @@
 		3356A74614053F45005F3314 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		33D7CFE41405A94500AF7183 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		33D7CFE71405A94A00AF7183 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		EA22FD0414078F12000E5DAF /* boto_buit_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_buit_blue.png; path = images/boto_buit_blue.png; sourceTree = "<group>"; };
 		EA22FD0514078F12000E5DAF /* boto_buit_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_buit_green.png; path = images/boto_buit_green.png; sourceTree = "<group>"; };
 		EA22FD0614078F12000E5DAF /* boto_buit_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_buit_red.png; path = images/boto_buit_red.png; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		EA22FD101407A053000E5DAF /* boto_skip_fw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_skip_fw.png; path = images/boto_skip_fw.png; sourceTree = "<group>"; };
 		EA22FD111407A053000E5DAF /* boto_skip_rw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_skip_rw.png; path = images/boto_skip_rw.png; sourceTree = "<group>"; };
 		EA22FD121407A053000E5DAF /* boto_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_stop.png; path = images/boto_stop.png; sourceTree = "<group>"; };
+=======
+>>>>>>> 17801456e80e2f7d6eb11f77458fcb2d4e44e695
 		33D7CFF21406EFF300AF7183 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		EA37234513FDB1FF004E2970 /* boto_0.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_0.PNG; path = images/boto_0.PNG; sourceTree = "<group>"; };
 		EA37234613FDB1FF004E2970 /* boto_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_1.PNG; path = images/boto_1.PNG; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 				3356A74714053F45005F3314 /* MainWindow-iPad.xib in Resources */,
 				33D7CFE51405A94600AF7183 /* Icon.png in Resources */,
 				33D7CFE81405A94A00AF7183 /* Icon@2x.png in Resources */,
+<<<<<<< HEAD
 				EA22FD0814078F12000E5DAF /* boto_buit_blue.png in Resources */,
 				EA22FD0914078F12000E5DAF /* boto_buit_green.png in Resources */,
 				EA22FD0A14078F12000E5DAF /* boto_buit_red.png in Resources */,
@@ -546,6 +553,8 @@
 				EA22FD161407A053000E5DAF /* boto_skip_fw.png in Resources */,
 				EA22FD171407A053000E5DAF /* boto_skip_rw.png in Resources */,
 				EA22FD181407A053000E5DAF /* boto_stop.png in Resources */,
+=======
+>>>>>>> 17801456e80e2f7d6eb11f77458fcb2d4e44e695
 				33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
