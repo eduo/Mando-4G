@@ -20,6 +20,7 @@
 		EA22FD161407A053000E5DAF /* boto_skip_fw.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD101407A053000E5DAF /* boto_skip_fw.png */; };
 		EA22FD171407A053000E5DAF /* boto_skip_rw.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD111407A053000E5DAF /* boto_skip_rw.png */; };
 		EA22FD181407A053000E5DAF /* boto_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = EA22FD121407A053000E5DAF /* boto_stop.png */; };
+		33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 33D7CFF21406EFF300AF7183 /* iTunesArtwork */; };
 		EA37235113FDB1FF004E2970 /* boto_0.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234513FDB1FF004E2970 /* boto_0.PNG */; };
 		EA37235213FDB1FF004E2970 /* boto_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234613FDB1FF004E2970 /* boto_1.PNG */; };
 		EA37235313FDB1FF004E2970 /* boto_2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA37234713FDB1FF004E2970 /* boto_2.PNG */; };
@@ -122,6 +123,7 @@
 		EA22FD101407A053000E5DAF /* boto_skip_fw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_skip_fw.png; path = images/boto_skip_fw.png; sourceTree = "<group>"; };
 		EA22FD111407A053000E5DAF /* boto_skip_rw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_skip_rw.png; path = images/boto_skip_rw.png; sourceTree = "<group>"; };
 		EA22FD121407A053000E5DAF /* boto_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_stop.png; path = images/boto_stop.png; sourceTree = "<group>"; };
+		33D7CFF21406EFF300AF7183 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		EA37234513FDB1FF004E2970 /* boto_0.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_0.PNG; path = images/boto_0.PNG; sourceTree = "<group>"; };
 		EA37234613FDB1FF004E2970 /* boto_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_1.PNG; path = images/boto_1.PNG; sourceTree = "<group>"; };
 		EA37234713FDB1FF004E2970 /* boto_2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_2.PNG; path = images/boto_2.PNG; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		EAA6ABEA13F9902100165C93 = {
 			isa = PBXGroup;
 			children = (
+				33D7CFF21406EFF300AF7183 /* iTunesArtwork */,
 				33D7CFE71405A94A00AF7183 /* Icon@2x.png */,
 				33D7CFE41405A94500AF7183 /* Icon.png */,
 				EAA6ABFF13F9902200165C93 /* Mando 4G */,
@@ -543,6 +546,7 @@
 				EA22FD161407A053000E5DAF /* boto_skip_fw.png in Resources */,
 				EA22FD171407A053000E5DAF /* boto_skip_rw.png in Resources */,
 				EA22FD181407A053000E5DAF /* boto_stop.png in Resources */,
+				33D7CFF31406EFF300AF7183 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
