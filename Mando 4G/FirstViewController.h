@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController {
+    UILabel *etiquetaIP;
+}
+
+@property (nonatomic, retain) IBOutlet UILabel *etiquetaIP;
 - (IBAction)boto_Menu:(id)sender;
 - (IBAction)boto_Salir:(id)sender;
 - (IBAction)boto_Config:(id)sender;

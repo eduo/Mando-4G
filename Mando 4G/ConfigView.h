@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ConfigView : UIViewController
+@interface ConfigView : UIViewController <UITextFieldDelegate> {
+    UITextField *ipEquip;
+    UILabel *etiquetaIP;
+}
+@property (nonatomic, retain) IBOutlet UITextField *ipEquip;
+
+@property (nonatomic, retain) IBOutlet UILabel *etiquetaIP;
+- (IBAction)boto_Ok_IP:(id)sender;
 
 @end

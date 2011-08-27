@@ -14,7 +14,9 @@ NSString* sendCommand(const UInt8 *commandEnviar)
     CFWriteStreamRef writeStream = NULL;
     CFReadStreamRef readStream = NULL;
     
-    CFStringRef host = CFSTR("192.168.1.12");
+    // NSLog(@"IP Config: %@", ipEquipSelect);
+    // CFStringRef host = CFSTR("192.168.1.12");
+    CFStringRef host = (CFStringRef) ipEquipSelect;
     UInt32 port = 9010;
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault, host, port, &readStream, &writeStream);
@@ -28,7 +30,7 @@ NSString* sendCommand(const UInt8 *commandEnviar)
     else {
         /* UInt8 buf[] = "K|2";  */
         int bytesWritten = CFWriteStreamWrite(writeStream, commandEnviar, strlen((char*)commandEnviar));
-        NSLog(@"Written: %d", bytesWritten);
+        // NSLog(@"Written: %d", bytesWritten);
         enviat = [NSString stringWithFormat:@"Enviat: %@ - Enviats: %d Bytes", [NSString stringWithUTF8String:(const char *)commandEnviar], bytesWritten];
         
         if (bytesWritten < 0) {
@@ -46,7 +48,7 @@ NSString* sendCommand(const UInt8 *commandEnviar)
     else {
         UInt8 bufread[128];
         int bytesReaded = CFReadStreamRead(readStream, bufread, sizeof(bufread));
-        NSLog(@"Llegit: %d", bytesReaded);
+        // NSLog(@"Llegit: %d", bytesReaded);
         /* self.label.text = [NSString stringWithFormat:@"%@ - Llegit: %@ - Llegits: %d Bytes", self.label.text, [(NSString*)bufread substringToIndex:strlen((char*)bufread)], bytesReaded];
          */
         

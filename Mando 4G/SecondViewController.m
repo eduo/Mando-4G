@@ -10,6 +10,7 @@
 #import "Mando4GFunc.h"
 
 @implementation SecondViewController
+@synthesize etiquetaIP;
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -35,6 +36,7 @@
 
 - (void)viewDidUnload
 {
+    [self setEtiquetaIP:nil];
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -191,4 +193,8 @@
     sendCommand(buf);
 }
 
+- (void)dealloc {
+    [etiquetaIP release];
+    [super dealloc];
+}
 @end

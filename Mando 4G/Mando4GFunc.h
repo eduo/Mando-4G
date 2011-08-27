@@ -40,7 +40,7 @@
 #define CMD_FFWD	"K|44"
 #define CMD_FRWD	"K|45"
 #define CMD_SFWD	"K|46"
-#define CMD_SEARCH	"K|48"
+#define CMD_IR_A	"K|48"
 #define CMD_REPEAT	"K|49"
 #define CMD_STITLE	"K|51"
 #define CMD_AUDIO	"K|52"
@@ -79,6 +79,8 @@
 
 #define CMD_OPERA           "B|o"
 
+NSString *ipEquipSelect;
 NSString* sendCommand(const UInt8 *commandEnviar);
 
 #endif
+

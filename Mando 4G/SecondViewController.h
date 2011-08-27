@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController {
+    UILabel *etiquetaIP;
+}
+@property (nonatomic, retain) IBOutlet UILabel *etiquetaIP;
 - (IBAction)boto_Power:(id)sender;
 - (IBAction)boto_Menu:(id)sender;
 - (IBAction)boto_Salir:(id)sender;

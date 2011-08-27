@@ -7,9 +7,14 @@
 //
 
 #import "ConfigView.h"
+#import "Mando4GFunc.h"
 
 @implementation ConfigView
+@synthesize ipEquip;
+@synthesize etiquetaIP;
 
+/*
+ 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -18,6 +23,8 @@
     }
     return self;
 }
+ 
+*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,6 +44,8 @@
 
 - (void)viewDidUnload
 {
+    [self setIpEquip:nil];
+    [self setEtiquetaIP:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,4 +57,31 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)boto_Ok_IP:(id)sender {
+    NSString *etiqueta = nil;
+    if ([self.ipEquip.text length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
+    } else {
+        // NSLog(@"IP Config camp Text: %@", self.ipEquip.text);
+        ipEquipSelect = self.ipEquip.text;
+        // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+        
+    [etiqueta release];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    if (theTextField == self.ipEquip) {
+        [theTextField resignFirstResponder];
+    }
+    return YES;
+}
+
+- (void)dealloc {
+    [ipEquip release];
+    [etiquetaIP release];
+    [super dealloc];
+}
 @end

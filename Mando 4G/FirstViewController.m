@@ -10,14 +10,24 @@
 #import "Mando4GFunc.h"
 
 @implementation FirstViewController
+@synthesize etiquetaIP;
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+    NSString *etiqueta = nil;
+    // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+    if ([ipEquipSelect length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter!!!"];
+    } else {
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+    [etiqueta release];
+
     [super viewDidLoad];
 }
-*/
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -35,6 +45,7 @@
 
 - (void)viewDidUnload
 {
+    [self setEtiquetaIP:nil];
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -172,7 +183,7 @@
 }
 
 - (IBAction)boto_IrA:(id)sender {
-    UInt8 buf[] = CMD_SEARCH;
+    UInt8 buf[] = CMD_IR_A;
     sendCommand(buf);
 }
 
@@ -191,4 +202,8 @@
     sendCommand(buf);
 }
 
+- (void)dealloc {
+    [etiquetaIP release];
+    [super dealloc];
+}
 @end
