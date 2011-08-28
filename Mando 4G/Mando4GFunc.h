@@ -34,6 +34,7 @@
 #define CMD_NINE	"K|37"
 #define CMD_PLAY	"K|39"
 #define CMD_PAUSE	"K|40"
+#define CMD_PLAY_PAUSE	"K|-28"
 #define CMD_STOP	"K|41"
 #define CMD_NEXT	"K|42"
 #define CMD_PREV	"K|43"
@@ -79,8 +80,11 @@
 
 #define CMD_OPERA           "B|o"
 
+#define CMD_QWERTY_BACKSPACE "Q|22"
+
 NSString *ipEquipSelect;
 NSString* sendCommand(const UInt8 *commandEnviar);
+void alertaMissatge(NSString* title, NSString* missatge);
 
 #endif
 

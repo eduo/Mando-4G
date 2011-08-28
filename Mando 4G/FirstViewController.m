@@ -35,6 +35,21 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSString *etiqueta = nil;
+    // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+    if ([ipEquipSelect length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter!!!"];
+    } else {
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+    [etiqueta release];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -148,7 +163,7 @@
 }
 
 - (IBAction)boto_Pausa:(id)sender {
-    UInt8 buf[] = CMD_PAUSE;
+    UInt8 buf[] = CMD_PLAY_PAUSE;
     sendCommand(buf);
 }
 

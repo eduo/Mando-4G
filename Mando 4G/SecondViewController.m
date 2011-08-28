@@ -12,13 +12,36 @@
 @implementation SecondViewController
 @synthesize etiquetaIP;
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *etiqueta = nil;
+    // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+    if ([ipEquipSelect length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter!!!"];
+    } else {
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+    [etiqueta release];
+    
 }
-*/
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSString *etiqueta = nil;
+    // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+    if ([ipEquipSelect length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter!!!"];
+    } else {
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+    [etiqueta release];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

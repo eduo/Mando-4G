@@ -8,6 +8,17 @@
 
 
 
-@interface BuscarView : UIViewController
+@interface BuscarView : UIViewController {
+    UITextField *textMissatge;
+    UILabel *etiquetaIP;
+}
+@property (nonatomic, retain) IBOutlet UILabel *etiquetaIP;
+
+@property (nonatomic, retain) IBOutlet UITextField *textMissatge;
+- (IBAction)boto_Del:(id)sender;
+- (IBAction)boto_buscar:(id)sender;
+- (IBAction)boto_www:(id)sender;
+- (IBAction)boto_qwerty:(id)sender;
+- (IBAction)boto_msg:(id)sender;
 
 @end

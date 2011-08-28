@@ -63,6 +63,9 @@
         etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
     } else {
         // NSLog(@"IP Config camp Text: %@", self.ipEquip.text);
+        if ([self.ipEquip isFirstResponder]) {
+            [self.ipEquip resignFirstResponder];
+        }
         ipEquipSelect = self.ipEquip.text;
         // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
         etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
