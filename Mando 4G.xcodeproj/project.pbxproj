@@ -644,7 +644,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C7A23BF2-FB84-4381-8DF3-458E64C77876";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";
@@ -700,7 +700,7 @@
 				INFOPLIST_FILE = "Mando 4G/Mando 4G-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -713,7 +713,7 @@
 				INFOPLIST_FILE = "Mando 4G/Mando 4G-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Mando 4G";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
