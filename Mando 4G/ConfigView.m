@@ -40,6 +40,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
+	
+	if([settings objectForKey:@"ipEquip"] != nil) {  
+		self.ipEquip.text = [settings objectForKey:@"ipEquip"];  
+		ipEquipSelect = self.ipEquip.text;
+
+	}  
+	
+
 }
 
 - (void)viewDidUnload
@@ -58,6 +67,10 @@
 }
 
 - (IBAction)boto_Ok_IP:(id)sender {
+	
+	// recover IP Address from User Settings
+	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
+
     NSString *etiqueta = nil;
     if ([self.ipEquip.text length] == 0 ) {
         etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
@@ -66,9 +79,24 @@
         if ([self.ipEquip isFirstResponder]) {
             [self.ipEquip resignFirstResponder];
         }
+
+
+		
         ipEquipSelect = self.ipEquip.text;
         // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
         etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+		
+		
+		NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
+		
+		// Save the index.  
+		[settings setObject:ipEquipSelect forKey:@"ipEquip"];  
+	
+		// Write them to disk - this is optional here,  
+		// but should be done when the app exits.  
+		[settings synchronize];  
+		
+		
     }
     self.etiquetaIP.text = etiqueta;
         
