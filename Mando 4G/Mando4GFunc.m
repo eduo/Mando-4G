@@ -11,10 +11,13 @@
 NSString* sendCommand(const UInt8 *commandEnviar)
 {
     NSString *enviat = nil;
+    NSString *retornat = nil;
     CFWriteStreamRef writeStream = NULL;
     CFReadStreamRef readStream = NULL;
     
-    // NSLog(@"IP Config: %@", ipEquipSelect);
+    UInt8 bufread[128];
+
+    	// NSLog(@"IP Config: %@", ipEquipSelect);
     // CFStringRef host = CFSTR("192.168.1.12");
     
     if (ipEquipSelect == NULL) {
@@ -54,7 +57,6 @@ NSString* sendCommand(const UInt8 *commandEnviar)
                     enviat = [NSString stringWithFormat:@"Error"];
                 }
                 else {
-                    UInt8 bufread[128];
                     int bytesReaded = CFReadStreamRead(readStream, bufread, sizeof(bufread));
                     // NSLog(@"Llegit: %d", bytesReaded);
                     /* self.label.text = [NSString stringWithFormat:@"%@ - Llegit: %@ - Llegits: %d Bytes", self.label.text, [(NSString*)bufread substringToIndex:strlen((char*)bufread)], bytesReaded];
@@ -70,6 +72,9 @@ NSString* sendCommand(const UInt8 *commandEnviar)
                         NSLog(@"Error al llegir de Sockets");
                         alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
                         enviat = [NSString stringWithFormat:@"Error"];
+                    } else {
+                        retornat = [NSString stringWithUTF8String:(const char *) bufread];
+                        NSLog(@"Retornat: %@", retornat);
                     }
                 }
             }
@@ -79,7 +84,7 @@ NSString* sendCommand(const UInt8 *commandEnviar)
         CFWriteStreamClose(writeStream);
         CFReadStreamClose(readStream);
     }
-    return enviat;
+    return retornat;
 }
 
 void alertaMissatge (NSString* title, NSString* missatge) {

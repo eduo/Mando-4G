@@ -107,9 +107,8 @@
 }
 
 - (IBAction)boto_Left:(id)sender {
-    NSString *retorn;
     UInt8 buf[] = CMD_LEFT;
-    retorn = sendCommand(buf);
+    sendCommand(buf);
 }
 
 - (IBAction)boto_Right:(id)sender {
