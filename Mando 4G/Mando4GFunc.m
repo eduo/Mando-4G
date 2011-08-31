@@ -38,7 +38,7 @@ NSString* sendCommand(const UInt8 *commandEnviar)
             /* UInt8 buf[] = "K|2";  */
             int bytesWritten = CFWriteStreamWrite(writeStream, commandEnviar, strlen((char*)commandEnviar));
             // NSLog(@"Written: %d", bytesWritten);
-            enviat = [NSString stringWithFormat:@"Enviat: %@ - Enviats: %d Bytes", [NSString stringWithUTF8String:(const char *)commandEnviar], bytesWritten];
+            enviat = [NSString stringWithUTF8String:(const char *)commandEnviar];
             
             if (bytesWritten < 0) {
                 // CFStreamError error = CFWriteStreamGetError(writeStream);
@@ -59,6 +59,10 @@ NSString* sendCommand(const UInt8 *commandEnviar)
                     // NSLog(@"Llegit: %d", bytesReaded);
                     /* self.label.text = [NSString stringWithFormat:@"%@ - Llegit: %@ - Llegits: %d Bytes", self.label.text, [(NSString*)bufread substringToIndex:strlen((char*)bufread)], bytesReaded];
                      */
+                    
+                    /* NSLog(@"Retornat: %@", [(NSString*)bufread substringToIndex:strlen((char*)bufread)]);
+                       enviat = [(NSString*)bufread substringToIndex:strlen((char*)bufread)];
+                    */
                     
                     if (bytesReaded < 0) {
                         // CFStreamError error = CFReadStreamGetError(readStream);

@@ -107,6 +107,7 @@
     BOOL flagCap = NO;
     NSString *lletraQwerty;
     NSString *texte;
+    NSString *enviat;
     
     if ([self.textMissatge isFirstResponder]) {
         [self.textMissatge resignFirstResponder];
@@ -124,7 +125,8 @@
 
             if (!flagCap) {
                 NSLog(@"Envio CAPS");
-                // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                 flagCap = YES;
             }
         } else {
@@ -134,7 +136,8 @@
 
                 if (flagCap) {
                     NSLog(@"Envio CAPS");
-                    // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                    enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                    if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                     flagCap = NO;
                 }
             } 
@@ -144,7 +147,9 @@
 
         if (texte != NULL) {
             NSLog(@"Envio la lletra: %@, Codi: %@", lletraQwerty, texte);
-            // sendCommand((const UInt8 *)[texte UTF8String]);
+            enviat = sendCommand((const UInt8 *)[texte UTF8String]);
+            NSLog(@"Codi Tornat: %@", enviat);
+            if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", [NSString stringWithFormat:@"Envio incorrecto de: %@", texte]); };
         } else {
             NSLog(@"Caracter no admès: %@", lletraQwerty);
             alertaMissatge(@"AVISO", [NSString stringWithFormat:@"Caracter no válido: %@", lletraQwerty]);
@@ -153,7 +158,8 @@
     
     if (flagCap) {
         NSLog(@"Envio CAPS");
-        // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+        enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+        if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
         flagCap = NO;
     }
 }
