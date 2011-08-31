@@ -42,6 +42,20 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSString *etiqueta = nil;
+    // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+    if ([ipEquipSelect length] == 0 ) {
+        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter!!!"];
+    } else {
+        etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+    }
+    self.etiquetaIP.text = etiqueta;
+    [etiqueta release];
+}
+
 - (void)viewDidUnload
 {
     [self setIpEquip:nil];
@@ -71,14 +85,24 @@
         etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
     }
     self.etiquetaIP.text = etiqueta;
-        
-    [etiqueta release];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    NSString *etiqueta = nil;
+    
     if (theTextField == self.ipEquip) {
         [theTextField resignFirstResponder];
+        if ([self.ipEquip.text length] == 0 ) {
+            etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
+        } else {
+            // NSLog(@"IP Config camp Text: %@", self.ipEquip.text);
+            ipEquipSelect = self.ipEquip.text;
+            // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
+            etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+        }
     }
+    self.etiquetaIP.text = etiqueta;
+    
     return YES;
 }
 
