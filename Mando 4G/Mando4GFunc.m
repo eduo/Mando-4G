@@ -87,3 +87,78 @@ void alertaMissatge (NSString* title, NSString* missatge) {
     [alert show];
     [alert release];
 }
+
+void asignaCodigosQwerty(void) {
+    codigosQwerty = [[NSMutableDictionary alloc] init];
+    
+    [codigosQwerty setObject:@"Q|1"  forKey:@"Q"];
+    [codigosQwerty setObject:@"Q|2"  forKey:@"W"];
+    [codigosQwerty setObject:@"Q|3"  forKey:@"E"];
+    [codigosQwerty setObject:@"Q|4"  forKey:@"R"];
+    [codigosQwerty setObject:@"Q|5"  forKey:@"T"];
+    [codigosQwerty setObject:@"Q|6"  forKey:@"Y"];
+    [codigosQwerty setObject:@"Q|7"  forKey:@"U"];
+    [codigosQwerty setObject:@"Q|8"  forKey:@"I"];
+    [codigosQwerty setObject:@"Q|9"  forKey:@"O"];
+    [codigosQwerty setObject:@"Q|10" forKey:@"P"];
+    [codigosQwerty setObject:@"Q|11" forKey:@"A"];
+    [codigosQwerty setObject:@"Q|12" forKey:@"S"];
+    [codigosQwerty setObject:@"Q|13" forKey:@"D"];
+    [codigosQwerty setObject:@"Q|14" forKey:@"F"];
+    [codigosQwerty setObject:@"Q|15" forKey:@"G"];
+    [codigosQwerty setObject:@"Q|16" forKey:@"UP"];
+    [codigosQwerty setObject:@"Q|17" forKey:@"LEFT"];
+    [codigosQwerty setObject:@"Q|18" forKey:@"H"];
+    [codigosQwerty setObject:@"Q|19" forKey:@"J"];
+    [codigosQwerty setObject:@"Q|20" forKey:@"K"];
+    [codigosQwerty setObject:@"Q|21" forKey:@"L"];
+    [codigosQwerty setObject:@"Q|22" forKey:@"BACKSPACE"];
+    [codigosQwerty setObject:@"Q|23" forKey:@"ALT"];
+    [codigosQwerty setObject:@"Q|24" forKey:@"Z"];
+    [codigosQwerty setObject:@"Q|25" forKey:@"X"];
+    [codigosQwerty setObject:@"Q|26" forKey:@"C"];
+    [codigosQwerty setObject:@"Q|27" forKey:@"V"];
+    [codigosQwerty setObject:@"Q|28" forKey:@"DOWN"];
+    [codigosQwerty setObject:@"Q|29" forKey:@"RIGHT"];
+    [codigosQwerty setObject:@"Q|30" forKey:@"B"];
+    [codigosQwerty setObject:@"Q|31" forKey:@"N"];
+    [codigosQwerty setObject:@"Q|32" forKey:@"M"];
+    [codigosQwerty setObject:@"Q|33" forKey:@"Ñ"];
+    [codigosQwerty setObject:@"Q|34" forKey:@"OK"];
+    [codigosQwerty setObject:@"Q|35" forKey:@"CAP"];
+    [codigosQwerty setObject:@"Q|36" forKey:@"0"];
+    [codigosQwerty setObject:@"Q|37" forKey:@"SPCL"];
+    [codigosQwerty setObject:@"Q|38" forKey:@"SPCR"];
+    [codigosQwerty setObject:@"Q|37" forKey:@" "];
+    [codigosQwerty setObject:@"Q|39" forKey:@"SEARCH"];
+    [codigosQwerty setObject:@"Q|40" forKey:@"CAP_R"];
+    [codigosQwerty setObject:@"Q|41" forKey:@"#"];
+    [codigosQwerty setObject:@"Q|42" forKey:@"1"];
+    [codigosQwerty setObject:@"Q|43" forKey:@"2"];
+    [codigosQwerty setObject:@"Q|44" forKey:@"3"];
+    [codigosQwerty setObject:@"Q|45" forKey:@"("];
+    [codigosQwerty setObject:@"Q|46" forKey:@")"];
+    [codigosQwerty setObject:@"Q|47" forKey:@"_"];
+    [codigosQwerty setObject:@"Q|48" forKey:@"-"];
+    [codigosQwerty setObject:@"Q|49" forKey:@"+"];
+    [codigosQwerty setObject:@"Q|50" forKey:@"@"];
+    [codigosQwerty setObject:@"Q|51" forKey:@"*"];
+    [codigosQwerty setObject:@"Q|52" forKey:@"4"];
+    [codigosQwerty setObject:@"Q|53" forKey:@"5"];
+    [codigosQwerty setObject:@"Q|54" forKey:@"6"];
+    [codigosQwerty setObject:@"Q|55" forKey:@"/"];
+    [codigosQwerty setObject:@"Q|56" forKey:@":"];
+    [codigosQwerty setObject:@"Q|57" forKey:@";"];
+    [codigosQwerty setObject:@"Q|58" forKey:@"'"];
+    [codigosQwerty setObject:@"Q|59" forKey:@"\""];
+    [codigosQwerty setObject:@"Q|60" forKey:@"DEL"];
+    [codigosQwerty setObject:@"Q|61" forKey:@"7"];
+    [codigosQwerty setObject:@"Q|62" forKey:@"8"];
+    [codigosQwerty setObject:@"Q|63" forKey:@"9"];
+    [codigosQwerty setObject:@"Q|64" forKey:@"?"];
+    [codigosQwerty setObject:@"Q|65" forKey:@"!"];
+    [codigosQwerty setObject:@"Q|66" forKey:@","];
+    [codigosQwerty setObject:@"Q|67" forKey:@"."];
+    [codigosQwerty setObject:@"Q|68" forKey:@"$"];
+    
+}

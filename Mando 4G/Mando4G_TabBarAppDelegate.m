@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Hace la asignacion de codigos Qwerty con la funcion que esta en Mando4GFunc.m
+    asignaCodigosQwerty();
+    
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
@@ -71,6 +74,7 @@
 
 - (void)dealloc
 {
+    [codigosQwerty release];
     [_window release];
     [_tabBarController release];
     [super dealloc];

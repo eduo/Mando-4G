@@ -104,6 +104,58 @@
 }
 
 - (IBAction)boto_qwerty:(id)sender {
+    BOOL flagCap = NO;
+    NSString *lletraQwerty;
+    NSString *texte;
+    
+    if ([self.textMissatge isFirstResponder]) {
+        [self.textMissatge resignFirstResponder];
+    }
+
+    NSLog(@"Text: %@, Long.: %d",textMissatge.text, textMissatge.text.length);
+    for (int i=0; i < textMissatge.text.length; i++) {
+        lletraQwerty = [textMissatge.text substringWithRange:NSMakeRange(i, 1)];
+                
+        unichar valorAsc = [lletraQwerty characterAtIndex: 0];
+        NSLog(@"I: %d, Lletra: %@, Codi ASCII: %d",i, lletraQwerty, valorAsc);
+        
+        if (valorAsc >= 65 && valorAsc <= 90)  {
+            NSLog(@"Està entre A i Z");	
+
+            if (!flagCap) {
+                NSLog(@"Envio CAPS");
+                // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                flagCap = YES;
+            }
+        } else {
+            if (valorAsc >= 97 && valorAsc <= 122) {
+                NSLog(@"Està entre a i z");
+                lletraQwerty = [lletraQwerty uppercaseString];
+
+                if (flagCap) {
+                    NSLog(@"Envio CAPS");
+                    // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                    flagCap = NO;
+                }
+            } 
+        }
+ 
+        texte = [codigosQwerty objectForKey:lletraQwerty];
+
+        if (texte != NULL) {
+            NSLog(@"Envio la lletra: %@, Codi: %@", lletraQwerty, texte);
+            // sendCommand((const UInt8 *)[texte UTF8String]);
+        } else {
+            NSLog(@"Caracter no admès: %@", lletraQwerty);
+            alertaMissatge(@"AVISO", [NSString stringWithFormat:@"Caracter no válido: %@", lletraQwerty]);
+        }
+    }
+    
+    if (flagCap) {
+        NSLog(@"Envio CAPS");
+        // sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+        flagCap = NO;
+    }
 }
 
 - (IBAction)boto_msg:(id)sender {

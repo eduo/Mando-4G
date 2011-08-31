@@ -82,9 +82,14 @@
 
 #define CMD_QWERTY_BACKSPACE "Q|22"
 
+// Definiciones para el mando qwerty
+NSMutableDictionary *codigosQwerty;
+
 NSString *ipEquipSelect;
+
 NSString* sendCommand(const UInt8 *commandEnviar);
 void alertaMissatge(NSString* title, NSString* missatge);
+void asignaCodigosQwerty(void);
 
 #endif
 
