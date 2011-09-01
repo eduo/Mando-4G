@@ -108,7 +108,7 @@
     NSString *lletraQwerty;
     NSString *texte;
     NSString *retornat;
-    double tempsSleep = 500/1000;
+    useconds_t tempsSleep = 20000;
     
     if ([self.textMissatge isFirstResponder]) {
         [self.textMissatge resignFirstResponder];
@@ -119,29 +119,31 @@
         lletraQwerty = [textMissatge.text substringWithRange:NSMakeRange(i, 1)];
                 
         unichar valorAsc = [lletraQwerty characterAtIndex: 0];
-        NSLog(@"I: %d, Lletra: %@, Codi ASCII: %d",i, lletraQwerty, valorAsc);
+        // NSLog(@"I: %d, Lletra: %@, Codi ASCII: %d",i, lletraQwerty, valorAsc);
         
         if (valorAsc >= 65 && valorAsc <= 90)  {
-            NSLog(@"Està entre A i Z");	
+            // NSLog(@"Està entre A i Z");	
 
             if (!flagCap) {
                 NSLog(@"Envio CAPS");
                 retornat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
-                if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
+                // if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                 flagCap = YES;
-                [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+                // [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+                usleep(tempsSleep);
             }
         } else {
             if (valorAsc >= 97 && valorAsc <= 122) {
-                NSLog(@"Està entre a i z");
+                // NSLog(@"Està entre a i z");
                 lletraQwerty = [lletraQwerty uppercaseString];
 
                 if (flagCap) {
                     NSLog(@"Envio CAPS");
                     retornat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
-                    if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
+                    // if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                     flagCap = NO;
-                    [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+                    // [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+                    usleep(tempsSleep);
                 }
             } 
         }
@@ -152,8 +154,9 @@
             NSLog(@"Envio la lletra: %@, Codi: %@", lletraQwerty, texte);
             retornat = sendCommand((const UInt8 *)[texte UTF8String]);
             NSLog(@"Codi Tornat: %@", retornat);
-            if (retornat != [codigosQwerty objectForKey:lletraQwerty]) { alertaMissatge(@"ERROR", [NSString stringWithFormat:@"Envio incorrecto de: %@", texte]); };
-            [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+            // if (retornat != [codigosQwerty objectForKey:lletraQwerty]) { alertaMissatge(@"ERROR", [NSString stringWithFormat:@"Envio incorrecto de: %@", texte]); };
+            // [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
+            usleep(tempsSleep);
         } else {
             NSLog(@"Caracter no admès: %@", lletraQwerty);
             alertaMissatge(@"AVISO", [NSString stringWithFormat:@"Caracter no válido: %@", lletraQwerty]);

@@ -64,8 +64,9 @@ NSString* sendCommand(const UInt8 *commandEnviar)
                         alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
                         retornat = [NSString stringWithFormat:@"Error"];
                     } else {
-                        retornat = [NSString stringWithUTF8String:(const char *) bufread];
-                        NSLog(@"Retornat: %@", retornat);
+                        // retornat = [NSString stringWithUTF8String:(const char *) bufread];
+                        retornat = [NSString stringWithUTF8String:strndup((const char *) bufread, bytesReaded)];
+                        // NSLog(@"Retornat: %@", retornat);
                     }
                 }
             }
