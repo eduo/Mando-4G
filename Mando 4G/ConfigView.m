@@ -40,15 +40,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    /*
 	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
 	
 	if([settings objectForKey:@"ipEquip"] != nil) {  
 		self.ipEquip.text = [settings objectForKey:@"ipEquip"];  
 		ipEquipSelect = self.ipEquip.text;
 
-	}  
+	} 
+    */
 	
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -83,33 +85,19 @@
 - (IBAction)boto_Ok_IP:(id)sender {
 	
 	// recover IP Address from User Settings
-	NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
+	// NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
 
     NSString *etiqueta = nil;
-    if ([self.ipEquip.text length] == 0 ) {
-        etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
-    } else {
+    if ([self.ipEquip.text length] != 0 ) {
         // NSLog(@"IP Config camp Text: %@", self.ipEquip.text);
         if ([self.ipEquip isFirstResponder]) {
             [self.ipEquip resignFirstResponder];
         }
 
-
-		
         ipEquipSelect = self.ipEquip.text;
         // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
         etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
-		
-		
-		NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
-		
-		// Save the index.  
-		[settings setObject:ipEquipSelect forKey:@"ipEquip"];  
-	
-		// Write them to disk - this is optional here,  
-		// but should be done when the app exits.  
-		[settings synchronize];  
-		
+        [self guarda_config];
 		
     }
     self.etiquetaIP.text = etiqueta;
@@ -120,13 +108,12 @@
     
     if (theTextField == self.ipEquip) {
         [theTextField resignFirstResponder];
-        if ([self.ipEquip.text length] == 0 ) {
-            etiqueta = [[NSString alloc] initWithFormat:@"Configurar IP MediaCenter"];
-        } else {
+        if ([self.ipEquip.text length] != 0 ) {
             // NSLog(@"IP Config camp Text: %@", self.ipEquip.text);
             ipEquipSelect = self.ipEquip.text;
             // NSLog(@"IP Config ipEquipSelect: %@", ipEquipSelect);
             etiqueta = [[NSString alloc] initWithFormat:@"IP MC4G: %@",ipEquipSelect];
+            [self guarda_config];
         }
     }
     self.etiquetaIP.text = etiqueta;
@@ -138,5 +125,16 @@
     [ipEquip release];
     [etiquetaIP release];
     [super dealloc];
+}
+
+- (void)guarda_config {
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];  
+    
+    // Save the index.  
+    [settings setObject:ipEquipSelect forKey:@"ipEquip"];  
+	
+    // Write them to disk - this is optional here,  
+    // but should be done when the app exits.  
+    [settings synchronize];  
 }
 @end

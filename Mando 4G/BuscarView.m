@@ -107,7 +107,8 @@
     BOOL flagCap = NO;
     NSString *lletraQwerty;
     NSString *texte;
-    NSString *enviat;
+    NSString *retornat;
+    double tempsSleep = 500/1000;
     
     if ([self.textMissatge isFirstResponder]) {
         [self.textMissatge resignFirstResponder];
@@ -125,9 +126,10 @@
 
             if (!flagCap) {
                 NSLog(@"Envio CAPS");
-                enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
-                if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
+                retornat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                 flagCap = YES;
+                [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
             }
         } else {
             if (valorAsc >= 97 && valorAsc <= 122) {
@@ -136,9 +138,10 @@
 
                 if (flagCap) {
                     NSLog(@"Envio CAPS");
-                    enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
-                    if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
+                    retornat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+                    if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
                     flagCap = NO;
+                    [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
                 }
             } 
         }
@@ -147,9 +150,10 @@
 
         if (texte != NULL) {
             NSLog(@"Envio la lletra: %@, Codi: %@", lletraQwerty, texte);
-            enviat = sendCommand((const UInt8 *)[texte UTF8String]);
-            NSLog(@"Codi Tornat: %@", enviat);
-            if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", [NSString stringWithFormat:@"Envio incorrecto de: %@", texte]); };
+            retornat = sendCommand((const UInt8 *)[texte UTF8String]);
+            NSLog(@"Codi Tornat: %@", retornat);
+            if (retornat != [codigosQwerty objectForKey:lletraQwerty]) { alertaMissatge(@"ERROR", [NSString stringWithFormat:@"Envio incorrecto de: %@", texte]); };
+            [NSThread sleepForTimeInterval:(NSTimeInterval) tempsSleep];
         } else {
             NSLog(@"Caracter no admès: %@", lletraQwerty);
             alertaMissatge(@"AVISO", [NSString stringWithFormat:@"Caracter no válido: %@", lletraQwerty]);
@@ -158,8 +162,8 @@
     
     if (flagCap) {
         NSLog(@"Envio CAPS");
-        enviat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
-        if (enviat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
+        retornat = sendCommand((const UInt8 *)[codigosQwerty objectForKey:@"CAP"]);
+        if (retornat != [codigosQwerty objectForKey:@"CAP"]) { alertaMissatge(@"ERROR", @"Envio incorrecto de CAP"); };
         flagCap = NO;
     }
 }

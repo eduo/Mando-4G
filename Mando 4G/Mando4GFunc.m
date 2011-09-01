@@ -17,12 +17,12 @@ NSString* sendCommand(const UInt8 *commandEnviar)
     
     UInt8 bufread[128];
 
-    	// NSLog(@"IP Config: %@", ipEquipSelect);
+    // NSLog(@"IP Config: %@", ipEquipSelect);
     // CFStringRef host = CFSTR("192.168.1.12");
     
     if (ipEquipSelect == NULL) {
         alertaMissatge(@"ERROR",@"IP del MC4G no configurada");
-        enviat = [NSString stringWithFormat:@"Error"];
+        retornat = [NSString stringWithFormat:@"Error"];
     } else {
         CFStringRef host = (CFStringRef) ipEquipSelect;
         UInt32 port = 9010;
@@ -35,43 +35,34 @@ NSString* sendCommand(const UInt8 *commandEnviar)
         if(!CFWriteStreamOpen(writeStream)) {
             alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
             NSLog(@"Error Obrint Stream d'Escriptura");
-            enviat = [NSString stringWithFormat:@"Error"];
+            retornat = [NSString stringWithFormat:@"Error"];
         }
         else {
-            /* UInt8 buf[] = "K|2";  */
             int bytesWritten = CFWriteStreamWrite(writeStream, commandEnviar, strlen((char*)commandEnviar));
             // NSLog(@"Written: %d", bytesWritten);
             enviat = [NSString stringWithUTF8String:(const char *)commandEnviar];
             
             if (bytesWritten < 0) {
                 // CFStreamError error = CFWriteStreamGetError(writeStream);
-                /** How do I print out description? All i get is -1 here. i.e What is perror() equivalent? **/
                 NSLog(@"Error al escriure per Sockets");
                 alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
-                enviat = [NSString stringWithFormat:@"Error"];
+                retornat = [NSString stringWithFormat:@"Error"];
             } else {
                 
                 if(!CFReadStreamOpen(readStream)) {
                     NSLog(@"Error Obrint Stream de Lectura");
                     alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
-                    enviat = [NSString stringWithFormat:@"Error"];
+                    retornat = [NSString stringWithFormat:@"Error"];
                 }
                 else {
                     int bytesReaded = CFReadStreamRead(readStream, bufread, sizeof(bufread));
                     // NSLog(@"Llegit: %d", bytesReaded);
-                    /* self.label.text = [NSString stringWithFormat:@"%@ - Llegit: %@ - Llegits: %d Bytes", self.label.text, [(NSString*)bufread substringToIndex:strlen((char*)bufread)], bytesReaded];
-                     */
-                    
-                    /* NSLog(@"Retornat: %@", [(NSString*)bufread substringToIndex:strlen((char*)bufread)]);
-                       enviat = [(NSString*)bufread substringToIndex:strlen((char*)bufread)];
-                    */
                     
                     if (bytesReaded < 0) {
                         // CFStreamError error = CFReadStreamGetError(readStream);
-                        /** How do I print out description? All i get is -1 here. i.e What is perror() equivalent? **/
                         NSLog(@"Error al llegir de Sockets");
                         alertaMissatge(@"ERROR",@"Error accediendo a MC4G");
-                        enviat = [NSString stringWithFormat:@"Error"];
+                        retornat = [NSString stringWithFormat:@"Error"];
                     } else {
                         retornat = [NSString stringWithUTF8String:(const char *) bufread];
                         NSLog(@"Retornat: %@", retornat);

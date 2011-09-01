@@ -16,5 +16,6 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *etiquetaIP;
 - (IBAction)boto_Ok_IP:(id)sender;
+- (void)guarda_config;
 
 @end

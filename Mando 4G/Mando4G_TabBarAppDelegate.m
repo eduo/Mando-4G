@@ -23,12 +23,16 @@
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
-    
+
+    // Leemos la configuración si está almacenada
+    ipEquipSelect = [[NSUserDefaults standardUserDefaults] objectForKey:@"ipEquip"];
+	
     // Si no esta configurada la IP del MC4G pasamos a la vista de Config
     // NSLog(@"Valor de selectedIndex: %d", self.tabBarController.selectedIndex);
     if (ipEquipSelect == NULL) {
         self.tabBarController.selectedIndex = 3;
     }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
