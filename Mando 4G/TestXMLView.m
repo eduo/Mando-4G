@@ -251,8 +251,8 @@
 		bottomLabel = (UILabel *)[cell viewWithTag:BOTTOM_LABEL_TAG];
 	}
 	
-	topLabel.text = [NSString stringWithFormat:@"%@", cellstring];
-	bottomLabel.text = [NSString stringWithFormat:@"%@", current];
+    topLabel.text = [NSString stringWithFormat:@"%@", cellstring];
+    bottomLabel.text = [NSString stringWithFormat:@"%@", current];
 	
 	//
 	// Set the background and selected background images for the text.
