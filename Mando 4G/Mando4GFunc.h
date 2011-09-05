@@ -90,6 +90,5 @@ NSString *ipEquipSelect;
 NSString* sendCommand(const UInt8 *commandEnviar);
 void alertaMissatge(NSString* title, NSString* missatge);
 void asignaCodigosQwerty(void);
-
 #endif
 
