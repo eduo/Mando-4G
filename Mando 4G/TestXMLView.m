@@ -183,7 +183,7 @@
 		 autorelease];
 		
 		const CGFloat LABEL_HEIGHT = 20;
-		UIImage *image = [UIImage imageNamed:@"IMG_CH_T5H.png"];
+		UIImage *image = [UIImage imageNamed:@"IMG_CH_BLANK.png"];
 		
 		//
 		// Create the label for the top row of text
