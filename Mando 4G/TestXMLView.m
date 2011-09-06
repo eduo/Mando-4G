@@ -253,7 +253,7 @@
 	
     topLabel.text = [NSString stringWithFormat:@"%@", cellstring];
     bottomLabel.text = [NSString stringWithFormat:@"%@", current];
-	
+    
 	//
 	// Set the background and selected background images for the text.
 	// Since we will round the corners at the top and bottom of sections, we
@@ -292,6 +292,10 @@
 	// colorful to show on each row.
 	//
 	NSString *channel_name_url = [NSString stringWithFormat:@"http://%@/EXT/ios/images/IMG_CH_%@.png", ipEquipSelect,abrev];
+    
+    //Por si decidimos hacer del modulo parte de la aplicacion web
+//    NSString *channel_name_url = [NSString stringWithFormat:@"http://%@/web/modulos/parrilla/images/parrilla/IMG_CH_%@.png", ipEquipSelect,abrev];
+
 	NSLog (@"%@",channel_name_url);
 
 
