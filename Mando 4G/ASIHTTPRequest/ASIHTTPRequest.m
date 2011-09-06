@@ -291,8 +291,8 @@ static NSOperationQueue *sharedQueue = nil;
 	[self setShouldResetUploadProgress:YES];
 	[self setAllowCompressedResponse:YES];
 	[self setShouldWaitToInflateCompressedResponses:YES];
-//	[self setDefaultResponseEncoding:NSISOLatin1StringEncoding];
-    [self setDefaultResponseEncoding:NSUTF8StringEncoding];
+	[self setDefaultResponseEncoding:NSISOLatin1StringEncoding];
+//    [self setDefaultResponseEncoding:NSUTF8StringEncoding];
 	[self setShouldPresentProxyAuthenticationDialog:YES];
 	
 	[self setTimeOutSeconds:[ASIHTTPRequest defaultTimeOutSeconds]];
