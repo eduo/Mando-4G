@@ -50,9 +50,10 @@
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request startSynchronous];
 	NSError *error = [request error];
+
 	if (!error) {
-		[request setResponseEncoding:NSUTF8StringEncoding];
 		NSString *response = [request responseString];
+		NSLog(@"%@",response);
 		NSError *parseError = nil;
 		
 		self.xmlDictionary = [XMLReader dictionaryForXMLString:response error:&parseError];
@@ -169,15 +170,12 @@
 	NSString *cellstring = [[string valueForKey:@"name"] valueForKey:@"text"];
 	NSString *channelstring = [[string valueForKey:@"id"] valueForKey:@"text"];
 	NSString *current = [[string valueForKey:@"current"] valueForKey:@"text"];
-	
-	NSData *test = [current dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:TRUE];
-	NSString *encoded = [[NSString alloc] initWithData:test encoding:NSUTF8StringEncoding]; //
-
-	NSLog(@"UTF-8 %@ - %@", encoded,current);
-	
 	NSString *abrev_notrim = [[string valueForKey:@"abrev"] valueForKey:@"text"];
 	NSString *abrev = [[abrev_notrim stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-
+	NSString *test = [NSString stringWithUTF8String:current];
+	char* tempString = [current cStringUsingEncoding:NSISOLatin1StringEncoding];
+	current = [NSString stringWithUTF8String:tempString];
+	
 
 	
 	if (cell == nil){
