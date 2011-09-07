@@ -176,9 +176,7 @@
 	char* tempString = [current cStringUsingEncoding:NSISOLatin1StringEncoding];
 	current = [NSString stringWithUTF8String:tempString];
 	
-	tempString = [cellstring cStringUsingEncoding:NSISOLatin1StringEncoding];
-	cellstring = [NSString stringWithUTF8String:tempString];
-	
+
 	
 	if (cell == nil){
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
