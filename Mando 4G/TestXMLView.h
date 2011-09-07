@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TestXMLView : UITableViewController {
+@interface TestXMLView : UIViewController {
 	NSDictionary *xmlDictionary;
 	UITableView *tableView;
 	UIImageView *imageView;
