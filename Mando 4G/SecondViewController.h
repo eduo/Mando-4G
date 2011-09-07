@@ -22,6 +22,7 @@
 - (IBAction)boto_Down:(id)sender;
 - (IBAction)boto_Left:(id)sender;
 - (IBAction)boto_Right:(id)sender;
+- (IBAction)boto_Opera:(id)sender;
 - (IBAction)boto_Usb:(id)sender;
 - (IBAction)boto_Disc:(id)sender;
 - (IBAction)boto_Red:(id)sender;
@@ -42,7 +43,6 @@
 - (IBAction)boto_Seven:(id)sender;
 - (IBAction)boto_Eight:(id)sender;
 - (IBAction)boto_Nine:(id)sender;
-- (IBAction)boto_IrA:(id)sender;
 
 // Test
 @end

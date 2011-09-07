@@ -30,7 +30,7 @@
     // Si no esta configurada la IP del MC4G pasamos a la vista de Config
     // NSLog(@"Valor de selectedIndex: %d", self.tabBarController.selectedIndex);
     if (ipEquipSelect == NULL) {
-        self.tabBarController.selectedIndex = 4;
+        self.tabBarController.selectedIndex = 3;
     }
     
     [self.window makeKeyAndVisible];
