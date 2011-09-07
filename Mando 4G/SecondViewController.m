@@ -116,11 +116,6 @@
     sendCommand(buf);
 }
 
-- (IBAction)boto_Opera:(id)sender {
-    UInt8 buf[] = CMD_OPERA;
-    sendCommand(buf);
-}
-
 - (IBAction)boto_Usb:(id)sender {
     UInt8 buf[] = CMD_USB;
     sendCommand(buf);
@@ -213,6 +208,11 @@
 
 - (IBAction)boto_Nine:(id)sender {
     UInt8 buf[] = CMD_NINE;
+    sendCommand(buf);
+}
+
+- (IBAction)boto_IrA:(id)sender {
+    UInt8 buf[] = CMD_IR_A;
     sendCommand(buf);
 }
 

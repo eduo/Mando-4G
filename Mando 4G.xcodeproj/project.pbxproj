@@ -103,6 +103,11 @@
 		EA3723E714013794004E2970 /* boto_sg.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3723E614013794004E2970 /* boto_sg.png */; };
 		EA3723E914013981004E2970 /* boto_widgets.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3723E814013981004E2970 /* boto_widgets.png */; };
 		EA3723EB14013B8F004E2970 /* boto_catchtv.png in Resources */ = {isa = PBXBuildFile; fileRef = EA3723EA14013B8E004E2970 /* boto_catchtv.png */; };
+		EA5F356E14176E3500CEA4E4 /* icon_pantalla.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5F356B14176E3500CEA4E4 /* icon_pantalla.png */; };
+		EA5F356F14176E3500CEA4E4 /* icon_tv.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5F356C14176E3500CEA4E4 /* icon_tv.png */; };
+		EA5F357014176E3500CEA4E4 /* world_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5F356D14176E3500CEA4E4 /* world_icon.png */; };
+		EA5F3574141774E200CEA4E4 /* boto_next_file.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA5F3572141774E200CEA4E4 /* boto_next_file.PNG */; };
+		EA5F3575141774E200CEA4E4 /* boto_prev_file.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EA5F3573141774E200CEA4E4 /* boto_prev_file.PNG */; };
 		EAA6ABFA13F9902200165C93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA6ABF913F9902200165C93 /* UIKit.framework */; };
 		EAA6ABFC13F9902200165C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA6ABFB13F9902200165C93 /* Foundation.framework */; };
 		EAA6ABFE13F9902200165C93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA6ABFD13F9902200165C93 /* CoreGraphics.framework */; };
@@ -240,6 +245,11 @@
 		EA3723E614013794004E2970 /* boto_sg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_sg.png; path = images/boto_sg.png; sourceTree = "<group>"; };
 		EA3723E814013981004E2970 /* boto_widgets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_widgets.png; path = images/boto_widgets.png; sourceTree = "<group>"; };
 		EA3723EA14013B8E004E2970 /* boto_catchtv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_catchtv.png; path = images/boto_catchtv.png; sourceTree = "<group>"; };
+		EA5F356B14176E3500CEA4E4 /* icon_pantalla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_pantalla.png; path = images/icon_pantalla.png; sourceTree = "<group>"; };
+		EA5F356C14176E3500CEA4E4 /* icon_tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_tv.png; path = images/icon_tv.png; sourceTree = "<group>"; };
+		EA5F356D14176E3500CEA4E4 /* world_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = world_icon.png; path = images/world_icon.png; sourceTree = "<group>"; };
+		EA5F3572141774E200CEA4E4 /* boto_next_file.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_next_file.PNG; path = images/boto_next_file.PNG; sourceTree = "<group>"; };
+		EA5F3573141774E200CEA4E4 /* boto_prev_file.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boto_prev_file.PNG; path = images/boto_prev_file.PNG; sourceTree = "<group>"; };
 		EAA6ABF513F9902200165C93 /* Mando 4G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mando 4G.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA6ABF913F9902200165C93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAA6ABFB13F9902200165C93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -414,6 +424,11 @@
 		EAA6AC2C13F99A8D00165C93 /* Imatges */ = {
 			isa = PBXGroup;
 			children = (
+				EA5F3572141774E200CEA4E4 /* boto_next_file.PNG */,
+				EA5F3573141774E200CEA4E4 /* boto_prev_file.PNG */,
+				EA5F356B14176E3500CEA4E4 /* icon_pantalla.png */,
+				EA5F356C14176E3500CEA4E4 /* icon_tv.png */,
+				EA5F356D14176E3500CEA4E4 /* world_icon.png */,
 				33A2BB4A14157D64006C4DAF /* IMG_CH_BLANK.png */,
 				EA22FD0D1407A053000E5DAF /* boto_forward.png */,
 				EA22FD0E1407A053000E5DAF /* boto_pause.png */,
@@ -642,6 +657,11 @@
 				33D7CFFF1408096C00AF7183 /* iTunesArtwork in Resources */,
 				05A0DBBB141419A20088145C /* TestXMLView.xib in Resources */,
 				33A2BB4B14157D64006C4DAF /* IMG_CH_BLANK.png in Resources */,
+				EA5F356E14176E3500CEA4E4 /* icon_pantalla.png in Resources */,
+				EA5F356F14176E3500CEA4E4 /* icon_tv.png in Resources */,
+				EA5F357014176E3500CEA4E4 /* world_icon.png in Resources */,
+				EA5F3574141774E200CEA4E4 /* boto_next_file.PNG in Resources */,
+				EA5F3575141774E200CEA4E4 /* boto_prev_file.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
