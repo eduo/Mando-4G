@@ -35,14 +35,14 @@
 - (IBAction)boto_Pausa:(id)sender;
 - (IBAction)boto_Stop:(id)sender;
 - (IBAction)boto_Forward:(id)sender;
-- (IBAction)boto_Opera:(id)sender;
 - (IBAction)boto_Skip_rw:(id)sender;
 - (IBAction)boto_Skip_fw:(id)sender;
 - (IBAction)boto_Grab:(id)sender;
-- (IBAction)boto_IrA:(id)sender;
 - (IBAction)boto_Widgets:(id)sender;
 - (IBAction)boto_CatchTv:(id)sender;
 - (IBAction)boto_Mute:(id)sender;
+- (IBAction)boto_Prev_File:(id)sender;
+- (IBAction)boto_Next_File:(id)sender;
 
 
 @end

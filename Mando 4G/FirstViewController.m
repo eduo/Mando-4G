@@ -177,28 +177,18 @@
     sendCommand(buf);
 }
 
-- (IBAction)boto_Opera:(id)sender {
-    UInt8 buf[] = CMD_OPERA;
-    sendCommand(buf);
-}
-
 - (IBAction)boto_Skip_rw:(id)sender {
-    UInt8 buf[] = CMD_PREV_FILE;
+    UInt8 buf[] = CMD_PREV;
     sendCommand(buf);
 }
 
 - (IBAction)boto_Skip_fw:(id)sender {
-    UInt8 buf[] = CMD_NEXT_FILE;
+    UInt8 buf[] = CMD_NEXT;
     sendCommand(buf);
 }
 
 - (IBAction)boto_Grab:(id)sender {
     UInt8 buf[] = CMD_GRAB;
-    sendCommand(buf);
-}
-
-- (IBAction)boto_IrA:(id)sender {
-    UInt8 buf[] = CMD_IR_A;
     sendCommand(buf);
 }
 
@@ -214,6 +204,16 @@
 
 - (IBAction)boto_Mute:(id)sender {
     UInt8 buf[] = CMD_MUTE;
+    sendCommand(buf);
+}
+
+- (IBAction)boto_Prev_File:(id)sender {
+    UInt8 buf[] = CMD_PREV_FILE;
+    sendCommand(buf);
+}
+
+- (IBAction)boto_Next_File:(id)sender {
+    UInt8 buf[] = CMD_NEXT_FILE;
     sendCommand(buf);
 }
 
