@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0521BCE414190BBB000AC39E /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0521BCE314190BBB000AC39E /* Test.xib */; };
+		0521BCF014190CAD000AC39E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0521BCEF14190CAD000AC39E /* TestViewController.m */; };
+		0521BD1514190F58000AC39E /* TestViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0521BD1414190F58000AC39E /* TestViewAppDelegate.m */; };
 		05A0DBB6141419740088145C /* TestXMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A0DBB5141419740088145C /* TestXMLView.m */; };
 		05A0DBBB141419A20088145C /* TestXMLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A0DBBA141419A20088145C /* TestXMLView.xib */; };
 		05A0DC0714141F910088145C /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A0DC0614141F910088145C /* XMLReader.m */; };
@@ -132,6 +135,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0521BCE314190BBB000AC39E /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
+		0521BCEE14190CAD000AC39E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		0521BCEF14190CAD000AC39E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		0521BD1314190F58000AC39E /* TestViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewAppDelegate.h; sourceTree = "<group>"; };
+		0521BD1414190F58000AC39E /* TestViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewAppDelegate.m; sourceTree = "<group>"; };
 		05A0DBB4141419740088145C /* TestXMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXMLView.h; sourceTree = "<group>"; };
 		05A0DBB5141419740088145C /* TestXMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXMLView.m; sourceTree = "<group>"; };
 		05A0DBBA141419A20088145C /* TestXMLView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestXMLView.xib; sourceTree = "<group>"; };
@@ -406,6 +414,11 @@
 				05A0DBB4141419740088145C /* TestXMLView.h */,
 				05A0DBB5141419740088145C /* TestXMLView.m */,
 				05A0DBBA141419A20088145C /* TestXMLView.xib */,
+				0521BCE314190BBB000AC39E /* Test.xib */,
+				0521BCEE14190CAD000AC39E /* TestViewController.h */,
+				0521BCEF14190CAD000AC39E /* TestViewController.m */,
+				0521BD1314190F58000AC39E /* TestViewAppDelegate.h */,
+				0521BD1414190F58000AC39E /* TestViewAppDelegate.m */,
 			);
 			path = "Mando 4G";
 			sourceTree = "<group>";
@@ -662,6 +675,7 @@
 				EA5F357014176E3500CEA4E4 /* world_icon.png in Resources */,
 				EA5F3574141774E200CEA4E4 /* boto_next_file.PNG in Resources */,
 				EA5F3575141774E200CEA4E4 /* boto_prev_file.PNG in Resources */,
+				0521BCE414190BBB000AC39E /* Test.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +704,8 @@
 				33A2BB4314154C16006C4DAF /* ASIInputStream.m in Sources */,
 				33A2BB4414154C16006C4DAF /* ASINetworkQueue.m in Sources */,
 				33A2BB4514154C16006C4DAF /* Reachability.m in Sources */,
+				0521BCF014190CAD000AC39E /* TestViewController.m in Sources */,
+				0521BD1514190F58000AC39E /* TestViewAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
