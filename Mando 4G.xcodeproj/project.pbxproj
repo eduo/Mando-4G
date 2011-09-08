@@ -11,6 +11,7 @@
 		0521BCF014190CAD000AC39E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0521BCEF14190CAD000AC39E /* TestViewController.m */; };
 		0521BD1514190F58000AC39E /* TestViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0521BD1414190F58000AC39E /* TestViewAppDelegate.m */; };
 		0521BE9E1419812E000AC39E /* Mando4G_swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0521BE9D1419812E000AC39E /* Mando4G_swipe.png */; };
+		0521BF6B14198C85000AC39E /* Mando4G_swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0521BF6A14198C85000AC39E /* Mando4G_swipe.png */; };
 		05A0DBB6141419740088145C /* TestXMLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A0DBB5141419740088145C /* TestXMLView.m */; };
 		05A0DBBB141419A20088145C /* TestXMLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A0DBBA141419A20088145C /* TestXMLView.xib */; };
 		05A0DC0714141F910088145C /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A0DC0614141F910088145C /* XMLReader.m */; };
@@ -105,6 +106,7 @@
 		0521BD1314190F58000AC39E /* TestViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewAppDelegate.h; sourceTree = "<group>"; };
 		0521BD1414190F58000AC39E /* TestViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewAppDelegate.m; sourceTree = "<group>"; };
 		0521BE9D1419812E000AC39E /* Mando4G_swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mando4G_swipe.png; sourceTree = "<group>"; };
+		0521BF6A14198C85000AC39E /* Mando4G_swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mando4G_swipe.png; sourceTree = "<group>"; };
 		05A0DBB4141419740088145C /* TestXMLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXMLView.h; sourceTree = "<group>"; };
 		05A0DBB5141419740088145C /* TestXMLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXMLView.m; sourceTree = "<group>"; };
 		05A0DBBA141419A20088145C /* TestXMLView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestXMLView.xib; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		EAA6AC2C13F99A8D00165C93 /* Imatges */ = {
 			isa = PBXGroup;
 			children = (
+				0521BF6A14198C85000AC39E /* Mando4G_swipe.png */,
 				0521BE9D1419812E000AC39E /* Mando4G_swipe.png */,
 				EA5F3572141774E200CEA4E4 /* boto_next_file.PNG */,
 				EA5F3573141774E200CEA4E4 /* boto_prev_file.PNG */,
@@ -532,6 +535,7 @@
 				EA5F3575141774E200CEA4E4 /* boto_prev_file.PNG in Resources */,
 				0521BCE414190BBB000AC39E /* Test.xib in Resources */,
 				0521BE9E1419812E000AC39E /* Mando4G_swipe.png in Resources */,
+				0521BF6B14198C85000AC39E /* Mando4G_swipe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
