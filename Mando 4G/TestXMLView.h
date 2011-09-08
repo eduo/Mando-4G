@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TestXMLView : UIViewController {
+@interface TestXMLView : UITableViewController {
 	NSDictionary *xmlDictionary;
-	UITableView *tableView;
+	UITableView *myTableView;
 	UIImageView *imageView;
 }
 - (void)loadXmlDictionary:(NSString *)URL;
 - (void)sendOneCommand:(int)code;
 
 @property (nonatomic, copy) IBOutlet NSDictionary *xmlDictionary;
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UITableView *myTableView;
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 
 @end

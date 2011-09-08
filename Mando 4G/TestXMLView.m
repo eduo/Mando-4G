@@ -14,8 +14,9 @@
 #define USE_CUSTOM_DRAWING 1
 @implementation TestXMLView
 @synthesize xmlDictionary;
-@synthesize tableView;
+@synthesize myTableView;
 @synthesize imageView;
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -53,12 +54,12 @@
 
 	if (!error) {
 		NSString *response = [request responseString];
-		NSLog(@"%@",response);
+		// NSLog(@"%@",response);
 		NSError *parseError = nil;
 		
 		self.xmlDictionary = [XMLReader dictionaryForXMLString:response error:&parseError];
 		
-		NSLog(@"%@", xmlDictionary);
+		// NSLog(@"%@", xmlDictionary);
 	}
 	
 }
@@ -68,9 +69,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	NSLog (@"Test");
-	tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	tableView.rowHeight = 200;
-	tableView.backgroundColor = [UIColor clearColor];
+	myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	myTableView.rowHeight = 200;
+	myTableView.backgroundColor = [UIColor clearColor];
 	imageView.image = [UIImage imageNamed:@"gradientBackground.png"];
 	
     //
@@ -92,7 +93,7 @@
     headerLabel.font = [UIFont boldSystemFontOfSize:22];
     headerLabel.backgroundColor = [UIColor clearColor];
     [containerView addSubview:headerLabel];
-    self.tableView.tableHeaderView = containerView;	
+    self.myTableView.tableHeaderView = containerView;	
 	
 	
 	
@@ -110,6 +111,12 @@
 	NSLog(@"%@", xmlDictionary);
 */
 	
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"Paso por viewWillAppear");
+    [super viewWillAppear:animated];
+    [self loadXmlDictionary:nil];
 }
 
 
@@ -158,7 +165,7 @@
 #endif
 
 	
-	NSLog(@"Test2");
+	// NSLog(@"Test2");
 //	NSLog(@"%@", self.xmlDictionary);
 	static NSString *CellIdentifier = @"Cell";
 	
@@ -168,15 +175,13 @@
 	
 	NSDictionary *string = [array objectAtIndex:indexPath.row];
 	NSString *cellstring = [[string valueForKey:@"name"] valueForKey:@"text"];
-	NSString *channelstring = [[string valueForKey:@"id"] valueForKey:@"text"];
-	NSString *current = [[string valueForKey:@"current"] valueForKey:@"text"];
+	// NSString *channelstring = [[string valueForKey:@"id"] valueForKey:@"text"];
+	NSString *currenttmp = [[string valueForKey:@"current"] valueForKey:@"text"];
 	NSString *abrev_notrim = [[string valueForKey:@"abrev"] valueForKey:@"text"];
 	NSString *abrev = [[abrev_notrim stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-	NSString *test = [NSString stringWithUTF8String:current];
-	char* tempString = [current cStringUsingEncoding:NSISOLatin1StringEncoding];
-	current = [NSString stringWithUTF8String:tempString];
-	
-
+	// NSString *test = [NSString stringWithUTF8String:current];
+	const char *tempString = [currenttmp cStringUsingEncoding:NSISOLatin1StringEncoding];
+	NSString *current = [NSString stringWithUTF8String:tempString];
 	
 	if (cell == nil){
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
@@ -301,11 +306,11 @@
     //Por si decidimos hacer del modulo parte de la aplicacion web
 //    NSString *channel_name_url = [NSString stringWithFormat:@"http://%@/web/modulos/parrilla/images/parrilla/IMG_CH_%@.png", ipEquipSelect,abrev];
 
-	NSLog (@"%@",channel_name_url);
+	// NSLog (@"%@",channel_name_url);
 
 
 	// cell.image = [UIImage imageNamed:channel_name];
-	cell.image = 	[UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString:channel_name_url]]];
+	cell.imageView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString:channel_name_url]]];
 
 	
 #else
@@ -320,37 +325,37 @@
 }
 
 - (void)sendOneCommand:(int)code {
-	
+
 	switch( code) {
 		case (1):
-			sendCommand(CMD_ONE);
+			sendCommand((UInt8*) CMD_ONE);
 			break;
 		case (2):
-			sendCommand(CMD_TWO);
+			sendCommand((UInt8*) CMD_TWO);
 			break;
 		case (3):
-			sendCommand(CMD_THREE);
+			sendCommand((UInt8*) CMD_THREE);
 			break;
 		case (4):
-			sendCommand(CMD_FOUR);
+			sendCommand((UInt8*) CMD_FOUR);
 			break;
 		case (5):
-			sendCommand(CMD_FIVE);
+			sendCommand((UInt8*) CMD_FIVE);
 			break;
 		case (6):
-			sendCommand(CMD_SIX);
+			sendCommand((UInt8*) CMD_SIX);
 			break;
 		case (7):
-			sendCommand(CMD_SEVEN);
+			sendCommand((UInt8*) CMD_SEVEN);
 			break;
 		case (8):
-			sendCommand(CMD_EIGHT);
+			sendCommand((UInt8*) CMD_EIGHT);
 			break;
 		case (9):
-			sendCommand(CMD_NINE);
+			sendCommand((UInt8*) CMD_NINE);
 			break;
 		case (0):
-			sendCommand(CMD_ZERO);
+			sendCommand((UInt8*) CMD_ZERO);
 			break;
 			
 	}
@@ -359,7 +364,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"Pues me han dado y el index es: %d",indexPath.row);
+	// NSLog(@"Pues me han dado y el index es: %d",indexPath.row);
 	NSArray *array = [[xmlDictionary valueForKey:@"rss"] valueForKey:@"channel"];
 	
 	NSDictionary *string = [array objectAtIndex:indexPath.row];
@@ -379,12 +384,13 @@
 	for (int j=len;j>0;j--) {
 		int ch_code = channel_number /(pow(10,j-1));
 		channel_number -= ch_code*pow(10,j-1);
-		NSLog(@"Codigo a enviar: %d",ch_code);
+		// NSLog(@"Codigo a enviar: %d",ch_code);
 	
 		[self sendOneCommand:ch_code];
 	
 	}
 	
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
 }
 @end
