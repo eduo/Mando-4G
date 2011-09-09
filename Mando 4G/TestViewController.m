@@ -205,6 +205,11 @@
     CGPoint location = [recognizer locationInView:self.view];
     [self showImageWithText:@"icon_pantalla" atPoint:location];
     
+	// Depending on location, mute audio
+	// resolution in project not retina display
+	if (location.x>120 && location.x<200 && location.y>4 && location.y<40) {
+		sendCommand(CMD_MUTE);
+	}
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     imageView.alpha = 0.0;

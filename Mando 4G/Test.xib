@@ -51,7 +51,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">boto_2.PNG</string>
+							<string key="NSResourceName">Mando4G_swipe.png</string>
 						</object>
 					</object>
 				</object>
@@ -404,8 +404,8 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath"/>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">boto_2.PNG</string>
-			<string key="NS.object.0">{130, 83}</string>
+			<string key="NS.key.0">Mando4G_swipe.png</string>
+			<string key="NS.object.0">{640, 960}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">141</string>
 	</data>
